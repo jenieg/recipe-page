@@ -49,11 +49,16 @@ img {
     object-fit: cover;
 }
 
+article {
+    padding: 1rem 2rem;
+}
+
 .ingredients {
     background-color: var(--clr-rose-50);
     & h3 {
-        color: var(--clr-rose-800)
+        color: var(--clr-rose-800);
     }
+    border-radius: 0.5rem;
 }
 
 /** Nutrition **/
