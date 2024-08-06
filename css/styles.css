@@ -81,23 +81,25 @@ article {
 
 
 /** Instructions **/
-.instructions ol {
-    list-style: none;
-    counter-reset: number;
-    padding: 0;
+.instructions {
+    ol {
+        list-style: none;
+        counter-reset: number;
+        padding: 0;
+    }
+    ol li {
+        counter-increment: number;
+        font-size: 1rem;
+        padding: 0.5rem 0;
+    }
+    ol li::before {
+        content: counter(number) ".";
+        color: var(--clr-rose-800);
+        font-weight: bold;
+        padding-right: 1rem;
+    }
 }
-.instructions ol li {
-    counter-increment: number;
-    font-size: 1rem;
-    padding: 0.5rem 0;
 
-}
-.instructions ol li::before {
-    content: counter(number) ".";
-    color: var(--clr-rose-800);
-    font-weight: bold;
-    padding-right: 1rem;
-}
 
 /** Nutrition Table **/
 tr > :nth-child(2) {
@@ -126,9 +128,19 @@ td {
 
  /** screens larger than 375px **/
 @media screen and (min-width: 376px) {
+    body {
+        width: 90%;
+    }
+    
     img {
         object-fit: cover;
         border-radius: 2rem;
+        margin: 2rem;
+    }
+
+    article {
+        width: 100%;
+        padding: 0;
         margin: 2rem;
     }
 }
