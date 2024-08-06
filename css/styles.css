@@ -58,6 +58,7 @@ article {
     padding: 1rem 2rem;
 }
 
+/** Prep **/
 .prep {
     background-color: var(--clr-rose-50);
     & h3 {
@@ -71,12 +72,15 @@ article {
     }
 }
 
+/** Ingredients **/
 .ingredients {
     & li {
         padding: .25rem;
     }
 }
 
+
+/** Instructions **/
 .instructions ol {
     list-style: none;
     counter-reset: number;
@@ -95,7 +99,7 @@ article {
     padding-right: 1rem;
 }
 
-/** Nutrition **/
+/** Nutrition Table **/
 tr > :nth-child(2) {
     color: var(--clr-brown-800);
     font-weight: 700;
@@ -117,4 +121,14 @@ tr:last-child {
 
 td {
     padding: 0.5rem 0;
+}
+
+
+ /** screens larger than 375px **/
+@media screen and (min-width: 376px) {
+    img {
+        object-fit: cover;
+        border-radius: 2rem;
+        margin: 2rem;
+    }
 }
